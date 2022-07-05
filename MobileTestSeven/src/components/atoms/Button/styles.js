@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 import {BaseTouch, BaseView} from '../../atoms';
 
-export const ImageBackground = styled.ImageBackground.attrs({resizeMode: 'cover'})`
+export const Image = styled.Image.attrs({resizeMode: 'cover', borderRadius: 120})`
 width: ${({theme}) => theme.metrics.px(152)}px;
 height: ${({theme}) => theme.metrics.px(150)}px;
 border-radius: ${({theme}) => theme.metrics.px(120)}px;

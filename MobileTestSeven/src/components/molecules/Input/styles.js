@@ -5,6 +5,8 @@ export const ContainerSearchBar = styled.View`
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
+  margin-bottom: ${({theme, mb}) => theme.metrics.px(mb ? mb : 0)};
+  margin-left: ${({theme, ml}) => theme.metrics.px(ml ? ml : 0)};
   background-color: ${({theme}) => theme.colors.secondary};
   width: ${({theme}) => theme.metrics.px(380)}px;
   height: ${({theme, h}) => theme.metrics.px(60)}px;

@@ -89,6 +89,7 @@ export const BaseScroll = styled.ScrollView.attrs(
             width ? `${theme.metrics.px(width)}px` : fullWidth ? '100%' : 'auto'};
   padding-top: ${({theme, pt}) => theme.metrics.px(pt || 0)}px;
   margin-left: ${({theme, ml}) => theme.metrics.px(ml || 0)}px;
+  margin-top: ${({theme, mt}) => theme.metrics.px(mt || 0)}px;
   margin-bottom: ${({theme, mb}) => theme.metrics.px(mb || 0)}px;
   height: ${({theme, height, fullHeight}) =>
             height ? `${theme.metrics.px(height)}px` : fullHeight ? '100%' : 'auto'};

@@ -1,11 +1,22 @@
-import React from 'react';
-import {Container, Logo} from './styles';
+import React, {useEffect} from 'react';
+import {Logo} from './styles';
+import {BaseView, TitleSplash} from '../../../components'
 import LogoImage from '../../../assets/imgs/Logo.jpg'
 
-export const SplashScreen = () => {
+export const SplashScreen = ({navigation}) => {
+    useEffect(() => {
+        setTimeout(() => {
+            navigation.navigate('Home')
+        }, 3000);
+    });
     return (
-        <Container>
+        <BaseView fullWidth
+            fullHeight
+            bg={'background'}
+            align={'center'}
+            justify={'center'}>
             <Logo source={LogoImage} />
-        </Container>
+            <TitleSplash>Seven Players</TitleSplash>
+        </BaseView>
     )
 }

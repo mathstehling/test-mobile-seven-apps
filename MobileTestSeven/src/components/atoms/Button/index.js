@@ -1,16 +1,16 @@
 import React from 'react'
 import {BaseTouch, DefaultText, BaseView} from '../index'
-import {ImageBackground, SmallImageSinger, ImageContainer, SongContainer} from './styles'
+import {Image, SmallImageSinger, ImageContainer, SongContainer} from './styles'
 import {ass} from '../../../assets/imgs'
 
 
-export const FilterButton = ({children, image}) => {
+export const FilterButton = ({image, style, onPress}) => {
     return (
-        <ImageBackground source={{uri: image}}>
-            <BaseTouch width={152} height={150} br={120} bg={'greyLight'}>
-                <DefaultText fontSize={20} fw={400} color={'black'}>{children}</DefaultText>
-            </BaseTouch>
-        </ImageBackground>
+
+        <BaseTouch width={152} height={150} br={120} mt={12} onPress={onPress}>
+            <Image source={{uri: image}} />
+            <DefaultText fontSize={20} fw={600} color={'white'} mt={8}>{style}</DefaultText>
+        </BaseTouch>
     );
 };
 
@@ -30,8 +30,8 @@ export const SongButton = ({image, title, singer, time}) => {
             <ImageContainer ml={12} mt={10} br={40} row>
                 <SmallImageSinger source={{uri: image, }} />
                 <BaseView width={100}>
-                    <DefaultText color={'white'} fw={700} ml={20}>{title}</DefaultText>
-                    <DefaultText color={'white'} fw={400} ml={20} width={100} mt={5}>{singer}</DefaultText>
+                    <DefaultText color={'white'} fw={700} ml={20} width={300}>{title}</DefaultText>
+                    <DefaultText color={'white'} fw={400} ml={20} width={300} mt={5}>{singer}</DefaultText>
                 </BaseView>
                 <DefaultText color={'white'} fw={400} ml={182} mt={20}>{time}</DefaultText>
             </ImageContainer>

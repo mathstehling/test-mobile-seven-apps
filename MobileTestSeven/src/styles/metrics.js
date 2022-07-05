@@ -75,7 +75,7 @@ export const metrics = {
     wp,
     hp,
     px,
-    baseWidth: px(327),
+    baseWidth: px(380),
     handlePadding,
     handleBorderRadius,
 }
