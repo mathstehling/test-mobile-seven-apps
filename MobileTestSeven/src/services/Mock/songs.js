@@ -131,7 +131,7 @@ export const Songs = [
         id: 17,
         songName: 'Pé Na Areia',
         artistName: 'Diogo Nogueira',
-        duration: 3.40,
+        duration: 3.41,
         artistPicture: 'https://s2.glbimg.com/wqeVg3DCqMFJ7DOyM32Kr_8A3Ek=/0x0:720x620/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2018/l/x/fFlwBJSOOhzO6GJYvtYA/diogo.jpg',
         style: 'Pagode',
     },

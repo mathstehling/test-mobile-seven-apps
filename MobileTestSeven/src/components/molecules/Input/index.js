@@ -1,17 +1,17 @@
-import React, {useState} from 'react';
-import {InputText, ContainerSearchBar} from './styles';
+import React, { useState } from 'react';
+import { InputText, ContainerSearchBar } from './styles';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
-import {BaseView} from '../../atoms';
+import { BaseView } from '../../atoms';
+import { useSearchStore } from '../../../services';
 
-export const InputSearch = ({placeholder}) => {
+export const InputSearch = ({ placeholder, value, setValue }) => {
     const [focus, setFocus] = useState(false)
-    const [value, setValue] = useState('')
+    const { setSearch } = useSearchStore();
 
     return (
         <ContainerSearchBar focus={focus}>
             <BaseView row ml={18} mt={18}>
-                <Icon name={'magnify'} size={25} color={'#9D9D9D'} />
-                <InputText value={value} onChangeText={setValue} onEndEditing={() => setFocus(false)}
+                <InputText value={value} onChangeText={setValue} onEndEditing={() => { setFocus(false); setSearch(value) }}
                     onFocus={() => setFocus(true)}
                     placeholder={placeholder} />
             </BaseView>
